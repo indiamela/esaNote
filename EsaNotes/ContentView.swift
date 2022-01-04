@@ -10,11 +10,13 @@ struct ContentView: View {
     @State private var isLogOut = false
     var body: some View {
         TabView {
-            FeedView()
-                .badge(10)
-                .tabItem {
-                    Image(systemName: "list.dash.header.rectangle")
-                }
+            NavigationView {
+                FeedView()
+            }
+            .badge(10)
+            .tabItem {
+                Image(systemName: "list.dash.header.rectangle")
+            }
             CalendarView()
                 .tabItem {
                     Image(systemName: "calendar")
