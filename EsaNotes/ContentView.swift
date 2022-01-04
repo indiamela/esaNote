@@ -7,6 +7,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var isLogOut = false
     var body: some View {
         TabView {
             FeedView()
@@ -32,6 +33,9 @@ struct ContentView: View {
                 }
         }
         .font(.headline)
+        .fullScreenCover(isPresented: $isLogOut) {
+            OnboadingView()
+        }
     }
 }
 

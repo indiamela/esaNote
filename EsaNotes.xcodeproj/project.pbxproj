@@ -14,7 +14,7 @@
 		F25CD5C327844D9600A78B5E /* EsaNotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25CD5C227844D9600A78B5E /* EsaNotesTests.swift */; };
 		F25CD5CD27844D9600A78B5E /* EsaNotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25CD5CC27844D9600A78B5E /* EsaNotesUITests.swift */; };
 		F25CD5CF27844D9600A78B5E /* EsaNotesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25CD5CE27844D9600A78B5E /* EsaNotesUITestsLaunchTests.swift */; };
-		F25CD5E32784574600A78B5E /* OathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25CD5E22784574600A78B5E /* OathView.swift */; };
+		F25CD5E32784574600A78B5E /* OnboadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25CD5E22784574600A78B5E /* OnboadingView.swift */; };
 		F25CD5E52784575F00A78B5E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25CD5E42784575F00A78B5E /* ProfileView.swift */; };
 		F25CD5E72784577300A78B5E /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25CD5E62784577300A78B5E /* FeedView.swift */; };
 		F25CD5E92784578000A78B5E /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25CD5E82784578000A78B5E /* CalendarView.swift */; };
@@ -50,7 +50,7 @@
 		F25CD5C827844D9600A78B5E /* EsaNotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EsaNotesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F25CD5CC27844D9600A78B5E /* EsaNotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsaNotesUITests.swift; sourceTree = "<group>"; };
 		F25CD5CE27844D9600A78B5E /* EsaNotesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsaNotesUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		F25CD5E22784574600A78B5E /* OathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OathView.swift; sourceTree = "<group>"; };
+		F25CD5E22784574600A78B5E /* OnboadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboadingView.swift; sourceTree = "<group>"; };
 		F25CD5E42784575F00A78B5E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		F25CD5E62784577300A78B5E /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		F25CD5E82784578000A78B5E /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 				F25CD5DD278455DB00A78B5E /* Models */,
 				F25CD5DC278455D300A78B5E /* Views */,
 				F25CD5B327844D9400A78B5E /* ContentView.swift */,
-				F25CD5E22784574600A78B5E /* OathView.swift */,
+				F25CD5E22784574600A78B5E /* OnboadingView.swift */,
 				F25CD5E42784575F00A78B5E /* ProfileView.swift */,
 				F25CD5E62784577300A78B5E /* FeedView.swift */,
 				F25CD5E82784578000A78B5E /* CalendarView.swift */,
@@ -350,7 +350,7 @@
 				F25CD5E92784578000A78B5E /* CalendarView.swift in Sources */,
 				F25CD5EB2784578C00A78B5E /* SearchView.swift in Sources */,
 				F25CD5B427844D9400A78B5E /* ContentView.swift in Sources */,
-				F25CD5E32784574600A78B5E /* OathView.swift in Sources */,
+				F25CD5E32784574600A78B5E /* OnboadingView.swift in Sources */,
 				F25CD5B227844D9400A78B5E /* EsaNotesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
