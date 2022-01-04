@@ -1,0 +1,590 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F25CD5B227844D9400A78B5E /* EsaNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25CD5B127844D9400A78B5E /* EsaNotesApp.swift */; };
+		F25CD5B427844D9400A78B5E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25CD5B327844D9400A78B5E /* ContentView.swift */; };
+		F25CD5B627844D9600A78B5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F25CD5B527844D9600A78B5E /* Assets.xcassets */; };
+		F25CD5B927844D9600A78B5E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F25CD5B827844D9600A78B5E /* Preview Assets.xcassets */; };
+		F25CD5C327844D9600A78B5E /* EsaNotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25CD5C227844D9600A78B5E /* EsaNotesTests.swift */; };
+		F25CD5CD27844D9600A78B5E /* EsaNotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25CD5CC27844D9600A78B5E /* EsaNotesUITests.swift */; };
+		F25CD5CF27844D9600A78B5E /* EsaNotesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25CD5CE27844D9600A78B5E /* EsaNotesUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F25CD5BF27844D9600A78B5E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F25CD5A627844D9400A78B5E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F25CD5AD27844D9400A78B5E;
+			remoteInfo = EsaNotes;
+		};
+		F25CD5C927844D9600A78B5E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F25CD5A627844D9400A78B5E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F25CD5AD27844D9400A78B5E;
+			remoteInfo = EsaNotes;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F25CD5AE27844D9400A78B5E /* EsaNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EsaNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F25CD5B127844D9400A78B5E /* EsaNotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsaNotesApp.swift; sourceTree = "<group>"; };
+		F25CD5B327844D9400A78B5E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F25CD5B527844D9600A78B5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F25CD5B827844D9600A78B5E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F25CD5BE27844D9600A78B5E /* EsaNotesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EsaNotesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F25CD5C227844D9600A78B5E /* EsaNotesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsaNotesTests.swift; sourceTree = "<group>"; };
+		F25CD5C827844D9600A78B5E /* EsaNotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EsaNotesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F25CD5CC27844D9600A78B5E /* EsaNotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsaNotesUITests.swift; sourceTree = "<group>"; };
+		F25CD5CE27844D9600A78B5E /* EsaNotesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsaNotesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F25CD5AB27844D9400A78B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F25CD5BB27844D9600A78B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F25CD5C527844D9600A78B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F25CD5A527844D9400A78B5E = {
+			isa = PBXGroup;
+			children = (
+				F25CD5B027844D9400A78B5E /* EsaNotes */,
+				F25CD5C127844D9600A78B5E /* EsaNotesTests */,
+				F25CD5CB27844D9600A78B5E /* EsaNotesUITests */,
+				F25CD5AF27844D9400A78B5E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F25CD5AF27844D9400A78B5E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F25CD5AE27844D9400A78B5E /* EsaNotes.app */,
+				F25CD5BE27844D9600A78B5E /* EsaNotesTests.xctest */,
+				F25CD5C827844D9600A78B5E /* EsaNotesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F25CD5B027844D9400A78B5E /* EsaNotes */ = {
+			isa = PBXGroup;
+			children = (
+				F25CD5B127844D9400A78B5E /* EsaNotesApp.swift */,
+				F25CD5B327844D9400A78B5E /* ContentView.swift */,
+				F25CD5B527844D9600A78B5E /* Assets.xcassets */,
+				F25CD5B727844D9600A78B5E /* Preview Content */,
+			);
+			path = EsaNotes;
+			sourceTree = "<group>";
+		};
+		F25CD5B727844D9600A78B5E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F25CD5B827844D9600A78B5E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F25CD5C127844D9600A78B5E /* EsaNotesTests */ = {
+			isa = PBXGroup;
+			children = (
+				F25CD5C227844D9600A78B5E /* EsaNotesTests.swift */,
+			);
+			path = EsaNotesTests;
+			sourceTree = "<group>";
+		};
+		F25CD5CB27844D9600A78B5E /* EsaNotesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F25CD5CC27844D9600A78B5E /* EsaNotesUITests.swift */,
+				F25CD5CE27844D9600A78B5E /* EsaNotesUITestsLaunchTests.swift */,
+			);
+			path = EsaNotesUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F25CD5AD27844D9400A78B5E /* EsaNotes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F25CD5D227844D9600A78B5E /* Build configuration list for PBXNativeTarget "EsaNotes" */;
+			buildPhases = (
+				F25CD5AA27844D9400A78B5E /* Sources */,
+				F25CD5AB27844D9400A78B5E /* Frameworks */,
+				F25CD5AC27844D9400A78B5E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EsaNotes;
+			productName = EsaNotes;
+			productReference = F25CD5AE27844D9400A78B5E /* EsaNotes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F25CD5BD27844D9600A78B5E /* EsaNotesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F25CD5D527844D9600A78B5E /* Build configuration list for PBXNativeTarget "EsaNotesTests" */;
+			buildPhases = (
+				F25CD5BA27844D9600A78B5E /* Sources */,
+				F25CD5BB27844D9600A78B5E /* Frameworks */,
+				F25CD5BC27844D9600A78B5E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F25CD5C027844D9600A78B5E /* PBXTargetDependency */,
+			);
+			name = EsaNotesTests;
+			productName = EsaNotesTests;
+			productReference = F25CD5BE27844D9600A78B5E /* EsaNotesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F25CD5C727844D9600A78B5E /* EsaNotesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F25CD5D827844D9600A78B5E /* Build configuration list for PBXNativeTarget "EsaNotesUITests" */;
+			buildPhases = (
+				F25CD5C427844D9600A78B5E /* Sources */,
+				F25CD5C527844D9600A78B5E /* Frameworks */,
+				F25CD5C627844D9600A78B5E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F25CD5CA27844D9600A78B5E /* PBXTargetDependency */,
+			);
+			name = EsaNotesUITests;
+			productName = EsaNotesUITests;
+			productReference = F25CD5C827844D9600A78B5E /* EsaNotesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F25CD5A627844D9400A78B5E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					F25CD5AD27844D9400A78B5E = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					F25CD5BD27844D9600A78B5E = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = F25CD5AD27844D9400A78B5E;
+					};
+					F25CD5C727844D9600A78B5E = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = F25CD5AD27844D9400A78B5E;
+					};
+				};
+			};
+			buildConfigurationList = F25CD5A927844D9400A78B5E /* Build configuration list for PBXProject "EsaNotes" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F25CD5A527844D9400A78B5E;
+			productRefGroup = F25CD5AF27844D9400A78B5E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F25CD5AD27844D9400A78B5E /* EsaNotes */,
+				F25CD5BD27844D9600A78B5E /* EsaNotesTests */,
+				F25CD5C727844D9600A78B5E /* EsaNotesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F25CD5AC27844D9400A78B5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F25CD5B927844D9600A78B5E /* Preview Assets.xcassets in Resources */,
+				F25CD5B627844D9600A78B5E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F25CD5BC27844D9600A78B5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F25CD5C627844D9600A78B5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F25CD5AA27844D9400A78B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F25CD5B427844D9400A78B5E /* ContentView.swift in Sources */,
+				F25CD5B227844D9400A78B5E /* EsaNotesApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F25CD5BA27844D9600A78B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F25CD5C327844D9600A78B5E /* EsaNotesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F25CD5C427844D9600A78B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F25CD5CF27844D9600A78B5E /* EsaNotesUITestsLaunchTests.swift in Sources */,
+				F25CD5CD27844D9600A78B5E /* EsaNotesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F25CD5C027844D9600A78B5E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F25CD5AD27844D9400A78B5E /* EsaNotes */;
+			targetProxy = F25CD5BF27844D9600A78B5E /* PBXContainerItemProxy */;
+		};
+		F25CD5CA27844D9600A78B5E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F25CD5AD27844D9400A78B5E /* EsaNotes */;
+			targetProxy = F25CD5C927844D9600A78B5E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F25CD5D027844D9600A78B5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F25CD5D127844D9600A78B5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F25CD5D327844D9600A78B5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EsaNotes/Preview Content\"";
+				DEVELOPMENT_TEAM = 69MAR4S32D;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TaishiKusunose.EsaNotes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F25CD5D427844D9600A78B5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EsaNotes/Preview Content\"";
+				DEVELOPMENT_TEAM = 69MAR4S32D;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TaishiKusunose.EsaNotes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F25CD5D627844D9600A78B5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 69MAR4S32D;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TaishiKusunose.EsaNotesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EsaNotes.app/EsaNotes";
+			};
+			name = Debug;
+		};
+		F25CD5D727844D9600A78B5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 69MAR4S32D;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TaishiKusunose.EsaNotesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EsaNotes.app/EsaNotes";
+			};
+			name = Release;
+		};
+		F25CD5D927844D9600A78B5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 69MAR4S32D;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TaishiKusunose.EsaNotesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EsaNotes;
+			};
+			name = Debug;
+		};
+		F25CD5DA27844D9600A78B5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 69MAR4S32D;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TaishiKusunose.EsaNotesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EsaNotes;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F25CD5A927844D9400A78B5E /* Build configuration list for PBXProject "EsaNotes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F25CD5D027844D9600A78B5E /* Debug */,
+				F25CD5D127844D9600A78B5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F25CD5D227844D9600A78B5E /* Build configuration list for PBXNativeTarget "EsaNotes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F25CD5D327844D9600A78B5E /* Debug */,
+				F25CD5D427844D9600A78B5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F25CD5D527844D9600A78B5E /* Build configuration list for PBXNativeTarget "EsaNotesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F25CD5D627844D9600A78B5E /* Debug */,
+				F25CD5D727844D9600A78B5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F25CD5D827844D9600A78B5E /* Build configuration list for PBXNativeTarget "EsaNotesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F25CD5D927844D9600A78B5E /* Debug */,
+				F25CD5DA27844D9600A78B5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F25CD5A627844D9400A78B5E /* Project object */;
+}
