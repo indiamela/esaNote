@@ -24,6 +24,7 @@
 		F25CD5ED2784579C00A78B5E /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25CD5EC2784579C00A78B5E /* PostView.swift */; };
 		F261EB0A2786A40E00B7CCA8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F261EB092786A40E00B7CCA8 /* User.swift */; };
 		F272263E2785593900772135 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F272263D2785593900772135 /* SignInViewModel.swift */; };
+		F2B93990278BD8FE00407888 /* APIClientKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B9398F278BD8FE00407888 /* APIClientKey.swift */; };
 		F2D83F7027854A1300E25B82 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F2D83F6F27854A1300E25B82 /* FirebaseAuth */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		F261EB092786A40E00B7CCA8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F272263D2785593900772135 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		F272263F2785598600772135 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2B9398F278BD8FE00407888 /* APIClientKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,13 +127,6 @@
 				F25CD5DE278455ED00A78B5E /* ViewModels */,
 				F25CD5DD278455DB00A78B5E /* Models */,
 				F25CD5DC278455D300A78B5E /* Views */,
-				F25CD5B327844D9400A78B5E /* ContentView.swift */,
-				F25CD5E22784574600A78B5E /* OnboadingView.swift */,
-				F25CD5E42784575F00A78B5E /* ProfileView.swift */,
-				F25CD5E62784577300A78B5E /* FeedView.swift */,
-				F25CD5E82784578000A78B5E /* CalendarView.swift */,
-				F25CD5EA2784578C00A78B5E /* SearchView.swift */,
-				F25CD5EC2784579C00A78B5E /* PostView.swift */,
 				F25CD5B727844D9600A78B5E /* Preview Content */,
 			);
 			path = EsaNotes;
@@ -165,6 +160,13 @@
 		F25CD5DC278455D300A78B5E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F25CD5B327844D9400A78B5E /* ContentView.swift */,
+				F25CD5E22784574600A78B5E /* OnboadingView.swift */,
+				F25CD5E42784575F00A78B5E /* ProfileView.swift */,
+				F25CD5E62784577300A78B5E /* FeedView.swift */,
+				F25CD5E82784578000A78B5E /* CalendarView.swift */,
+				F25CD5EA2784578C00A78B5E /* SearchView.swift */,
+				F25CD5EC2784579C00A78B5E /* PostView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -172,9 +174,8 @@
 		F25CD5DD278455DB00A78B5E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F238D46B278696EF00B09CFB /* NetworkRequest.swift */,
+				F2B9398E278BD8C800407888 /* APIs */,
 				F261EB092786A40E00B7CCA8 /* User.swift */,
-				F238D46D27869A2C00B09CFB /* NetworkRequest+User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -207,6 +208,16 @@
 				F25CD5B527844D9600A78B5E /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		F2B9398E278BD8C800407888 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				F238D46B278696EF00B09CFB /* NetworkRequest.swift */,
+				F238D46D27869A2C00B09CFB /* NetworkRequest+User.swift */,
+				F2B9398F278BD8FE00407888 /* APIClientKey.swift */,
+			);
+			path = APIs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,6 +388,7 @@
 				F261EB0A2786A40E00B7CCA8 /* User.swift in Sources */,
 				F25CD5B427844D9400A78B5E /* ContentView.swift in Sources */,
 				F25CD5E32784574600A78B5E /* OnboadingView.swift in Sources */,
+				F2B93990278BD8FE00407888 /* APIClientKey.swift in Sources */,
 				F25CD5B227844D9400A78B5E /* EsaNotesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
