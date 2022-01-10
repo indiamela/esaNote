@@ -97,9 +97,7 @@ struct NetworkRequest {
 
     // MARK: Static Methods
     static func signOut() {
-        Self.accessToken = ""
-        Self.refreshToken = ""
-        Self.username = ""
+        SharedData.shared.clearAccountInfo()
     }
 
     // MARK: Methods
@@ -111,9 +109,10 @@ struct NetworkRequest {
         var request = URLRequest(url: url)
         print(request)
         request.httpMethod = method.rawValue
-        if let accessToken = NetworkRequest.accessToken {
+        if let accessToken = SharedData.shared.accessToken {
             request.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
         }
+
         let session = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let response = response as? HTTPURLResponse else {
                 DispatchQueue.main.async {
@@ -130,14 +129,10 @@ struct NetworkRequest {
                 return
             }
             print(String(data: data, encoding: .utf8)!)
+
             do {
                 let object = try JSONDecoder().decode(T.self, from: data)
                 DispatchQueue.main.async {
-                    if let user = object as? User {
-                        NetworkRequest.username = user.name
-                    } else if let token = object as? AuthorizeToken {
-                        NetworkRequest.accessToken = token.accessToken
-                    }
                     completionHandler(.success((response, object)))
                 }
                 return

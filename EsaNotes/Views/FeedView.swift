@@ -10,6 +10,11 @@ import SwiftUI
 struct FeedView: View {
     var body: some View {
         VStack {
+            Text(SharedData.shared.userName ?? "noName")
+            Text(SharedData.shared.email ?? "")
+            Text(SharedData.shared.icon ?? "")
+            Text(SharedData.shared.screenName ?? "")
+
             // カテゴリ
             // フォルダ
         }
