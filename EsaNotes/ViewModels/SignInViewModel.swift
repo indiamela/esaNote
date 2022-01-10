@@ -9,6 +9,7 @@ import Combine
 import AuthenticationServices
 
 class SignInViewModel: NSObject, ObservableObject {
+    @Published var isSuccess = false
     @Published private(set) var isLoading = false
 
     func signIn() {
@@ -39,8 +40,8 @@ class SignInViewModel: NSObject, ObservableObject {
                 networkRequest.start(responseType: AuthorizeToken.self) { result in
                     switch result {
                     case .success(let (_ , object)):
-                        self?.getUser()
                         SharedData.shared.accessToken = object.accessToken
+                        self?.getUser()
                     case .failure(let error):
                         print("Failed to exchange access code for tokens: \(error)")
                         self?.isLoading = false
@@ -76,8 +77,9 @@ class SignInViewModel: NSObject, ObservableObject {
             .networkRequest()?
             .start(responseType: User.self) { [weak self] result in
                 switch result {
-                case .success(let (_ , object)):
+                case .success(let (_, object)):
                     self?.setUserData(user: object)
+                    self?.isSuccess = true
                 case .failure(let error):
                     print("Failed to get user, or there is no valid/active session: \(error.localizedDescription)")
                 }

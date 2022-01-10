@@ -13,7 +13,6 @@ struct ContentView: View {
             NavigationView {
                 FeedView()
             }
-            .badge(10)
             .tabItem {
                 Image(systemName: "list.dash.header.rectangle")
             }
