@@ -9,7 +9,7 @@ import Combine
 import AuthenticationServices
 
 class SignInViewModel: NSObject, ObservableObject {
-  @Published var isShowingRepositoriesView = false
+  @Published var isShowingSignInView = false
   @Published private(set) var isLoading = false
 
   func signIn() {
@@ -70,7 +70,7 @@ class SignInViewModel: NSObject, ObservableObject {
       .start(responseType: User.self) { [weak self] result in
         switch result {
         case .success:
-          self?.isShowingRepositoriesView = true
+          self?.isShowingSignInView = true
         case .failure(let error):
           print("Failed to get user, or there is no valid/active session: \(error.localizedDescription)")
         }
