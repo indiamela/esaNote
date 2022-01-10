@@ -24,6 +24,7 @@
 		F25CD5ED2784579C00A78B5E /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25CD5EC2784579C00A78B5E /* PostView.swift */; };
 		F261EB0A2786A40E00B7CCA8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F261EB092786A40E00B7CCA8 /* User.swift */; };
 		F272263E2785593900772135 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F272263D2785593900772135 /* SignInViewModel.swift */; };
+		F298F858278BF6FA00AD3C48 /* AuthorizeToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298F857278BF6FA00AD3C48 /* AuthorizeToken.swift */; };
 		F2B93990278BD8FE00407888 /* APIClientKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B9398F278BD8FE00407888 /* APIClientKey.swift */; };
 		F2D83F7027854A1300E25B82 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F2D83F6F27854A1300E25B82 /* FirebaseAuth */; };
 /* End PBXBuildFile section */
@@ -67,6 +68,7 @@
 		F261EB092786A40E00B7CCA8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F272263D2785593900772135 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		F272263F2785598600772135 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F298F857278BF6FA00AD3C48 /* AuthorizeToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeToken.swift; sourceTree = "<group>"; };
 		F2B9398F278BD8FE00407888 /* APIClientKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -216,6 +218,7 @@
 				F238D46B278696EF00B09CFB /* NetworkRequest.swift */,
 				F238D46D27869A2C00B09CFB /* NetworkRequest+User.swift */,
 				F2B9398F278BD8FE00407888 /* APIClientKey.swift */,
+				F298F857278BF6FA00AD3C48 /* AuthorizeToken.swift */,
 			);
 			path = APIs;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				F25CD5E72784577300A78B5E /* FeedView.swift in Sources */,
 				F25CD5E52784575F00A78B5E /* ProfileView.swift in Sources */,
 				F25CD5ED2784579C00A78B5E /* PostView.swift in Sources */,
+				F298F858278BF6FA00AD3C48 /* AuthorizeToken.swift in Sources */,
 				F25CD5E92784578000A78B5E /* CalendarView.swift in Sources */,
 				F238D46C278696EF00B09CFB /* NetworkRequest.swift in Sources */,
 				F25CD5EB2784578C00A78B5E /* SearchView.swift in Sources */,

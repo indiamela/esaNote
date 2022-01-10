@@ -2,7 +2,6 @@
 //  SignInViewModel.swift
 //  EsaNotes
 //
-//  Created by Taishi Kusunose on 2022/01/05.
 //
 
 import Foundation
@@ -38,7 +37,7 @@ class SignInViewModel: NSObject, ObservableObject {
       }
 
       self?.isLoading = true
-      networkRequest.start(responseType: String.self) { result in
+      networkRequest.start(responseType: AuthorizeToken.self) { result in
         switch result {
         case .success:
           self?.getUser()

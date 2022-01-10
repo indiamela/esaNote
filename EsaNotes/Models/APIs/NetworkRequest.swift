@@ -17,11 +17,11 @@ struct NetworkRequest {
         case networkCreationError
         case otherError
         case sessionExpired
+        case decodeError
     }
 
     enum RequestType: Equatable {
         case codeExchange(code: String)
-        case getRepos
         case getUser
         case signIn
 
@@ -36,8 +36,6 @@ struct NetworkRequest {
             switch self {
             case .codeExchange:
                 return .post
-            case .getRepos:
-                return .get
             case .getUser:
                 return .get
             case .signIn:
@@ -56,16 +54,7 @@ struct NetworkRequest {
                     "grant_type": "authorization_code",
                     "redirect_uri": "esanote://oauth-callback"
                 ].map { URLQueryItem(name: $0, value: $1) }
-
                 return urlComponents(path: "/oauth/token", queryItems: queryItems).url
-            case .getRepos:
-                guard
-                    let username = NetworkRequest.username,
-                    !username.isEmpty
-                else {
-                    return nil
-                }
-                return urlComponents(path: "/users/\(username)/repos", queryItems: nil).url
             case .getUser:
                 return urlComponents(path: "/v1/user", queryItems: nil).url
             case .signIn:
@@ -132,12 +121,7 @@ struct NetworkRequest {
                 }
                 return
             }
-            guard
-                error == nil,
-                let data = data,
-                let replacedData = String(data: data, encoding: .utf8)?
-                    .replacingOccurrences(of: "\\", with: "")
-                    .data(using: .utf8)
+            guard error == nil, let data = data
             else {
                 DispatchQueue.main.async {
                     let error = error ?? NetworkRequest.RequestError.otherError
@@ -145,41 +129,23 @@ struct NetworkRequest {
                 }
                 return
             }
-            print(String(data: replacedData, encoding: .utf8)!)
-
-            if T.self == String.self, let responseString = String(data: replacedData, encoding: .utf8) {
-                let replacedStr = responseString
-                    .replacingOccurrences(of: "\"", with: "")
-                    .replacingOccurrences(of: "{", with: "")
-                    .replacingOccurrences(of: "}", with: "")
-                let components = replacedStr.components(separatedBy: ",")
-                var dictionary: [String: String] = [:]
-                for component in components {
-                    let itemComponents = component.components(separatedBy: ":")
-                    if let key = itemComponents.first, let value = itemComponents.last {
-                        dictionary[key] = value
-                    }
-                }
-                DispatchQueue.main.async {
-                    NetworkRequest.accessToken = dictionary["access_token"]
-                    //          NetworkRequest.refreshToken = dictionary["refresh_token"]
-                    // swiftlint:disable:next force_cast
-                    completionHandler(.success((response, "Success" as! T)))
-                }
-                return
-            } else if let object = try? JSONDecoder().decode(T.self, from: replacedData) {
-
+            print(String(data: data, encoding: .utf8)!)
+            do {
+                let object = try JSONDecoder().decode(T.self, from: data)
                 DispatchQueue.main.async {
                     if let user = object as? User {
                         NetworkRequest.username = user.name
+                    } else if let token = object as? AuthorizeToken {
+                        NetworkRequest.accessToken = token.accessToken
                     }
                     completionHandler(.success((response, object)))
                 }
                 return
-            } else {
-                DispatchQueue.main.async {
-                    completionHandler(.failure(NetworkRequest.RequestError.otherError))
-                }
+            } catch let jsonError as NSError {
+                print("JSON decode failed: \(jsonError.localizedDescription)")
+                completionHandler(.failure(NetworkRequest.RequestError.decodeError))
+            } catch {
+                completionHandler(.failure(NetworkRequest.RequestError.otherError))
             }
         }
         session.resume()
