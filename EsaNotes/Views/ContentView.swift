@@ -7,7 +7,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var isLogOut = false
+    @State private var isLogOut = true
     var body: some View {
         TabView {
             NavigationView {
