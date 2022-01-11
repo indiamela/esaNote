@@ -26,7 +26,15 @@ struct FeedView: View {
         }
         .navigationBarTitle(Text("Feed"), displayMode: .inline)
         .navigationBarItems(
-            leading: Image(systemName: "person.fill")
+            leading:
+                AsyncImage(url: URL(string: SharedData.shared.icon ?? "")) { phase in
+                    if let image = phase.image {
+                        image
+                            .resizable()
+                    } else {
+                        Image(systemName: "person.fill")
+                    }
+                }
         )
     }
 }

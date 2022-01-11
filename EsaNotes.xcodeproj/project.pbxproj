@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F238D46C278696EF00B09CFB /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F238D46B278696EF00B09CFB /* NetworkRequest.swift */; };
+		F257953B278D0CC6000F49A1 /* Enums&Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F257953A278D0CC6000F49A1 /* Enums&Structs.swift */; };
 		F25CD5B227844D9400A78B5E /* EsaNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25CD5B127844D9400A78B5E /* EsaNotesApp.swift */; };
 		F25CD5B427844D9400A78B5E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25CD5B327844D9400A78B5E /* ContentView.swift */; };
 		F25CD5B627844D9600A78B5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F25CD5B527844D9600A78B5E /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		F238D46B278696EF00B09CFB /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		F257953A278D0CC6000F49A1 /* Enums&Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Enums&Structs.swift"; sourceTree = "<group>"; };
 		F25CD5AE27844D9400A78B5E /* EsaNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EsaNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F25CD5B127844D9400A78B5E /* EsaNotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsaNotesApp.swift; sourceTree = "<group>"; };
 		F25CD5B327844D9400A78B5E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				F298F85C278C11E100AD3C48 /* SharedData.swift */,
+				F257953A278D0CC6000F49A1 /* Enums&Structs.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				F272263E2785593900772135 /* SignInViewModel.swift in Sources */,
 				F261EB0A2786A40E00B7CCA8 /* User.swift in Sources */,
 				F25CD5B427844D9400A78B5E /* ContentView.swift in Sources */,
+				F257953B278D0CC6000F49A1 /* Enums&Structs.swift in Sources */,
 				F298F85D278C11E100AD3C48 /* SharedData.swift in Sources */,
 				F25CD5E32784574600A78B5E /* SignInView.swift in Sources */,
 				F2B93990278BD8FE00407888 /* APIClientKey.swift in Sources */,
