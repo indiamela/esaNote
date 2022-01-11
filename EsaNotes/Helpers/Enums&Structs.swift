@@ -20,3 +20,36 @@ struct MyColor {
     static let esaGreen = Color("esaGreen")
     static let esaGray = Color("esaGray")
 }
+
+enum Category: String {
+    case all = "All Documents"
+    case stars = "Stared"
+    case wip = "WIP"
+    case shipped = "Shipped"
+
+    var color: Color {
+        switch self {
+        case .all:
+            return Color.gray
+        case .stars:
+            return Color.yellow
+        case .wip:
+            return Color.blue
+        case .shipped:
+            return Color.red
+        }
+    }
+
+    var image: Image {
+        switch self {
+        case .all:
+            return Image(systemName: "doc.text.fill")
+        case .stars:
+            return Image(systemName: "star.fill")
+        case .wip:
+            return Image(systemName: "archivebox.fill")
+        case .shipped:
+            return Image(systemName: "paperplane.fill")
+        }
+    }
+}
