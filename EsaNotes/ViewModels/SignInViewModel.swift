@@ -57,10 +57,6 @@ class SignInViewModel: NSObject, ObservableObject {
         }
     }
 
-    func appeared() {
-        getUser()
-    }
-
     func setUserData(user: User) {
         SharedData.shared.isLoggedIn = true
         SharedData.shared.userName = user.name

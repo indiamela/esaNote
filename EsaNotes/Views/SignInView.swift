@@ -30,9 +30,14 @@ struct SignInView: View {
                 .background(MyColor.esaGreen)
                 .cornerRadius(6)
                 .font(.system(size: 25, weight: .medium, design: .default))
-                .padding()
+                .padding(20)
             })
                 .accentColor(Color.black)
+        }
+        .onChange(of: viewModel.isSuccess) { success in
+            if success {
+                dismiss()
+            }
         }
     }
 }
