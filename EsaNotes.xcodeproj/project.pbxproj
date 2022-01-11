@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F238D46C278696EF00B09CFB /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F238D46B278696EF00B09CFB /* NetworkRequest.swift */; };
-		F238D46E27869A2C00B09CFB /* NetworkRequest+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F238D46D27869A2C00B09CFB /* NetworkRequest+User.swift */; };
+		F257953B278D0CC6000F49A1 /* Enums&Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F257953A278D0CC6000F49A1 /* Enums&Structs.swift */; };
 		F25CD5B227844D9400A78B5E /* EsaNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25CD5B127844D9400A78B5E /* EsaNotesApp.swift */; };
 		F25CD5B427844D9400A78B5E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25CD5B327844D9400A78B5E /* ContentView.swift */; };
 		F25CD5B627844D9600A78B5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F25CD5B527844D9600A78B5E /* Assets.xcassets */; };
@@ -16,7 +16,7 @@
 		F25CD5C327844D9600A78B5E /* EsaNotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25CD5C227844D9600A78B5E /* EsaNotesTests.swift */; };
 		F25CD5CD27844D9600A78B5E /* EsaNotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25CD5CC27844D9600A78B5E /* EsaNotesUITests.swift */; };
 		F25CD5CF27844D9600A78B5E /* EsaNotesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25CD5CE27844D9600A78B5E /* EsaNotesUITestsLaunchTests.swift */; };
-		F25CD5E32784574600A78B5E /* OnboadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25CD5E22784574600A78B5E /* OnboadingView.swift */; };
+		F25CD5E32784574600A78B5E /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25CD5E22784574600A78B5E /* SignInView.swift */; };
 		F25CD5E52784575F00A78B5E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25CD5E42784575F00A78B5E /* ProfileView.swift */; };
 		F25CD5E72784577300A78B5E /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25CD5E62784577300A78B5E /* FeedView.swift */; };
 		F25CD5E92784578000A78B5E /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25CD5E82784578000A78B5E /* CalendarView.swift */; };
@@ -25,6 +25,7 @@
 		F261EB0A2786A40E00B7CCA8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F261EB092786A40E00B7CCA8 /* User.swift */; };
 		F272263E2785593900772135 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F272263D2785593900772135 /* SignInViewModel.swift */; };
 		F298F858278BF6FA00AD3C48 /* AuthorizeToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298F857278BF6FA00AD3C48 /* AuthorizeToken.swift */; };
+		F298F85D278C11E100AD3C48 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298F85C278C11E100AD3C48 /* SharedData.swift */; };
 		F2B93990278BD8FE00407888 /* APIClientKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B9398F278BD8FE00407888 /* APIClientKey.swift */; };
 		F2D83F7027854A1300E25B82 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F2D83F6F27854A1300E25B82 /* FirebaseAuth */; };
 /* End PBXBuildFile section */
@@ -48,7 +49,7 @@
 
 /* Begin PBXFileReference section */
 		F238D46B278696EF00B09CFB /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
-		F238D46D27869A2C00B09CFB /* NetworkRequest+User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkRequest+User.swift"; sourceTree = "<group>"; };
+		F257953A278D0CC6000F49A1 /* Enums&Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Enums&Structs.swift"; sourceTree = "<group>"; };
 		F25CD5AE27844D9400A78B5E /* EsaNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EsaNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F25CD5B127844D9400A78B5E /* EsaNotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsaNotesApp.swift; sourceTree = "<group>"; };
 		F25CD5B327844D9400A78B5E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,7 +60,7 @@
 		F25CD5C827844D9600A78B5E /* EsaNotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EsaNotesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F25CD5CC27844D9600A78B5E /* EsaNotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsaNotesUITests.swift; sourceTree = "<group>"; };
 		F25CD5CE27844D9600A78B5E /* EsaNotesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsaNotesUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		F25CD5E22784574600A78B5E /* OnboadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboadingView.swift; sourceTree = "<group>"; };
+		F25CD5E22784574600A78B5E /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		F25CD5E42784575F00A78B5E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		F25CD5E62784577300A78B5E /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		F25CD5E82784578000A78B5E /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
@@ -69,6 +70,7 @@
 		F272263D2785593900772135 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		F272263F2785598600772135 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F298F857278BF6FA00AD3C48 /* AuthorizeToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeToken.swift; sourceTree = "<group>"; };
+		F298F85C278C11E100AD3C48 /* SharedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
 		F2B9398F278BD8FE00407888 /* APIClientKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +126,7 @@
 				F272263F2785598600772135 /* Info.plist */,
 				F25CD5B127844D9400A78B5E /* EsaNotesApp.swift */,
 				F25CD5E12784561A00A78B5E /* Resources */,
+				F298F859278C104200AD3C48 /* Helpers */,
 				F25CD5E02784560000A78B5E /* Extensions */,
 				F25CD5DF278455F800A78B5E /* Services */,
 				F25CD5DE278455ED00A78B5E /* ViewModels */,
@@ -163,7 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				F25CD5B327844D9400A78B5E /* ContentView.swift */,
-				F25CD5E22784574600A78B5E /* OnboadingView.swift */,
+				F25CD5E22784574600A78B5E /* SignInView.swift */,
 				F25CD5E42784575F00A78B5E /* ProfileView.swift */,
 				F25CD5E62784577300A78B5E /* FeedView.swift */,
 				F25CD5E82784578000A78B5E /* CalendarView.swift */,
@@ -212,11 +215,19 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		F298F859278C104200AD3C48 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F298F85C278C11E100AD3C48 /* SharedData.swift */,
+				F257953A278D0CC6000F49A1 /* Enums&Structs.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		F2B9398E278BD8C800407888 /* APIs */ = {
 			isa = PBXGroup;
 			children = (
 				F238D46B278696EF00B09CFB /* NetworkRequest.swift */,
-				F238D46D27869A2C00B09CFB /* NetworkRequest+User.swift */,
 				F2B9398F278BD8FE00407888 /* APIClientKey.swift */,
 				F298F857278BF6FA00AD3C48 /* AuthorizeToken.swift */,
 			);
@@ -388,10 +399,11 @@
 				F238D46C278696EF00B09CFB /* NetworkRequest.swift in Sources */,
 				F25CD5EB2784578C00A78B5E /* SearchView.swift in Sources */,
 				F272263E2785593900772135 /* SignInViewModel.swift in Sources */,
-				F238D46E27869A2C00B09CFB /* NetworkRequest+User.swift in Sources */,
 				F261EB0A2786A40E00B7CCA8 /* User.swift in Sources */,
 				F25CD5B427844D9400A78B5E /* ContentView.swift in Sources */,
-				F25CD5E32784574600A78B5E /* OnboadingView.swift in Sources */,
+				F257953B278D0CC6000F49A1 /* Enums&Structs.swift in Sources */,
+				F298F85D278C11E100AD3C48 /* SharedData.swift in Sources */,
+				F25CD5E32784574600A78B5E /* SignInView.swift in Sources */,
 				F2B93990278BD8FE00407888 /* APIClientKey.swift in Sources */,
 				F25CD5B227844D9400A78B5E /* EsaNotesApp.swift in Sources */,
 			);

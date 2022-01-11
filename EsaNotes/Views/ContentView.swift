@@ -7,13 +7,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var isLogOut = true
+    @State var shouldLogIn = !SharedData.shared.isLoggedIn
     var body: some View {
         TabView {
             NavigationView {
                 FeedView()
             }
-            .badge(10)
             .tabItem {
                 Image(systemName: "list.dash.header.rectangle")
             }
@@ -35,8 +34,8 @@ struct ContentView: View {
                 }
         }
         .font(.headline)
-        .fullScreenCover(isPresented: $isLogOut) {
-            OnboadingView()
+        .fullScreenCover(isPresented: $shouldLogIn) {
+            SignInView()
         }
     }
 }
