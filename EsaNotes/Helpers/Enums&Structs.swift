@@ -21,7 +21,7 @@ struct MyColor {
     static let esaGray = Color("esaGray")
 }
 
-enum Category: String {
+enum PostStatus: String {
     case all = "All Documents"
     case stars = "Stared"
     case wip = "WIP"

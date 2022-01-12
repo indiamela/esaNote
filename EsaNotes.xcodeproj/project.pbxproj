@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		F235A9B6278DA760005AF8D5 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F235A9B5278DA75F005AF8D5 /* FeedViewModel.swift */; };
-		F235A9BB278DAE0F005AF8D5 /* CategoryContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F235A9BA278DAE0F005AF8D5 /* CategoryContent.swift */; };
+		F235A9BB278DAE0F005AF8D5 /* PostStatusContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F235A9BA278DAE0F005AF8D5 /* PostStatusContent.swift */; };
 		F235A9BE278E44BD005AF8D5 /* APIClientKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F235A9BD278E44BD005AF8D5 /* APIClientKey.swift */; };
+		F235A9C0278E5330005AF8D5 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F235A9BF278E5330005AF8D5 /* PostModel.swift */; };
 		F238D46C278696EF00B09CFB /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F238D46B278696EF00B09CFB /* NetworkRequest.swift */; };
 		F257953B278D0CC6000F49A1 /* Enums&Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F257953A278D0CC6000F49A1 /* Enums&Structs.swift */; };
 		F25CD5B227844D9400A78B5E /* EsaNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25CD5B127844D9400A78B5E /* EsaNotesApp.swift */; };
@@ -51,8 +52,9 @@
 
 /* Begin PBXFileReference section */
 		F235A9B5278DA75F005AF8D5 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
-		F235A9BA278DAE0F005AF8D5 /* CategoryContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryContent.swift; sourceTree = "<group>"; };
+		F235A9BA278DAE0F005AF8D5 /* PostStatusContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostStatusContent.swift; sourceTree = "<group>"; };
 		F235A9BD278E44BD005AF8D5 /* APIClientKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientKey.swift; sourceTree = "<group>"; };
+		F235A9BF278E5330005AF8D5 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		F238D46B278696EF00B09CFB /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		F257953A278D0CC6000F49A1 /* Enums&Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Enums&Structs.swift"; sourceTree = "<group>"; };
 		F25CD5AE27844D9400A78B5E /* EsaNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EsaNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,7 +109,7 @@
 		F235A9B7278DA7A6005AF8D5 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
-				F235A9BA278DAE0F005AF8D5 /* CategoryContent.swift */,
+				F235A9BA278DAE0F005AF8D5 /* PostStatusContent.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -194,6 +196,7 @@
 			children = (
 				F2B9398E278BD8C800407888 /* APIs */,
 				F261EB092786A40E00B7CCA8 /* User.swift */,
+				F235A9BF278E5330005AF8D5 /* PostModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -406,9 +409,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F25CD5E72784577300A78B5E /* FeedView.swift in Sources */,
+				F235A9C0278E5330005AF8D5 /* PostModel.swift in Sources */,
 				F25CD5E52784575F00A78B5E /* ProfileView.swift in Sources */,
 				F25CD5ED2784579C00A78B5E /* PostView.swift in Sources */,
-				F235A9BB278DAE0F005AF8D5 /* CategoryContent.swift in Sources */,
+				F235A9BB278DAE0F005AF8D5 /* PostStatusContent.swift in Sources */,
 				F298F858278BF6FA00AD3C48 /* AuthorizeToken.swift in Sources */,
 				F25CD5E92784578000A78B5E /* CalendarView.swift in Sources */,
 				F238D46C278696EF00B09CFB /* NetworkRequest.swift in Sources */,

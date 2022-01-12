@@ -11,14 +11,17 @@ struct FeedView: View {
     var body: some View {
         VStack {
             // カテゴリ
-            CategoryContent()
+            PostStatusContent()
             // フォルダ
-            Button {
-                NetworkRequest.signOut()
-            } label: {
-                Text("sign out")
+            List {
+                ForEach(0..<10) { content in
+                    NavigationLink {
+                        PostStatusContent()
+                    } label: {
+                        Text("aaa")
+                    }
+                }
             }
-
         }
         .navigationBarTitle(Text("Feed"), displayMode: .inline)
         .navigationBarItems(
@@ -28,7 +31,7 @@ struct FeedView: View {
                         image
                             .resizable()
                     } else {
-                        Image(systemName: "person.fill")
+                        ProgressView()
                     }
                 }
         )

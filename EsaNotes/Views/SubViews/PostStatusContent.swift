@@ -7,23 +7,23 @@
 
 import SwiftUI
 
-struct CategoryContent: View {
+struct PostStatusContent: View {
     var body: some View {
         VStack {
             HStack {
-                categoryButton(for: .all)
-                categoryButton(for: .stars)
+                postStatusButton(for: .all)
+                postStatusButton(for: .stars)
             }
             HStack {
-                categoryButton(for: .wip)
-                categoryButton(for: .shipped)
+                postStatusButton(for: .wip)
+                postStatusButton(for: .shipped)
             }
         }
     }
 }
 
-extension CategoryContent {
-    func categoryButton(for category: Category) -> some View {
+extension PostStatusContent {
+    func postStatusButton(for category: PostStatus) -> some View {
         ZStack() {
             RoundedRectangle(cornerRadius: 10)
                 .frame(height: 100)
@@ -54,7 +54,7 @@ extension CategoryContent {
 
 struct CategoryContent_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryContent()
+        PostStatusContent()
             .previewLayout(.sizeThatFits)
     }
 }
