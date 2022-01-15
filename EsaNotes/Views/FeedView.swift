@@ -8,20 +8,25 @@
 import SwiftUI
 
 struct FeedView: View {
+    let viewModel = FeedViewModel()
     var body: some View {
         VStack {
             // カテゴリ
             PostStatusContent()
+                .padding()
             // フォルダ
             List {
-                ForEach(0..<10) { content in
-                    NavigationLink {
-                        PostStatusContent()
-                    } label: {
-                        Text("aaa")
+                Section(header: Text("Folder")) {
+                    ForEach (viewModel.posts) { content in
+                        NavigationLink {
+
+                        } label: {
+                            Text(content.category ?? "No category")
+                        }
                     }
                 }
             }
+            .listStyle(.insetGrouped)
         }
         .navigationBarTitle(Text("Feed"), displayMode: .inline)
         .navigationBarItems(
