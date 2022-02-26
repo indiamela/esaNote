@@ -17,12 +17,6 @@ struct FeedView: View {
 
             // カテゴリ
             // フォルダ
-            Button {
-                NetworkRequest.signOut()
-            } label: {
-                Text("sign out")
-            }
-
         }
         .navigationBarTitle(Text("Feed"), displayMode: .inline)
         .navigationBarItems(

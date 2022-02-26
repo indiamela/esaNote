@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8884CDA727C9D46B009962DB /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884CDA627C9D46B009962DB /* AuthRepository.swift */; };
 		F238D46C278696EF00B09CFB /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F238D46B278696EF00B09CFB /* NetworkRequest.swift */; };
 		F257953B278D0CC6000F49A1 /* Enums&Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F257953A278D0CC6000F49A1 /* Enums&Structs.swift */; };
 		F25CD5B227844D9400A78B5E /* EsaNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25CD5B127844D9400A78B5E /* EsaNotesApp.swift */; };
@@ -26,7 +27,6 @@
 		F272263E2785593900772135 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F272263D2785593900772135 /* SignInViewModel.swift */; };
 		F298F858278BF6FA00AD3C48 /* AuthorizeToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298F857278BF6FA00AD3C48 /* AuthorizeToken.swift */; };
 		F298F85D278C11E100AD3C48 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298F85C278C11E100AD3C48 /* SharedData.swift */; };
-		F2B93990278BD8FE00407888 /* APIClientKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B9398F278BD8FE00407888 /* APIClientKey.swift */; };
 		F2D83F7027854A1300E25B82 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F2D83F6F27854A1300E25B82 /* FirebaseAuth */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8884CDA627C9D46B009962DB /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
 		F238D46B278696EF00B09CFB /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		F257953A278D0CC6000F49A1 /* Enums&Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Enums&Structs.swift"; sourceTree = "<group>"; };
 		F25CD5AE27844D9400A78B5E /* EsaNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EsaNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +101,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8884CDA327C9CF3E009962DB /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				8884CDA527C9D388009962DB /* SignIn */,
+				F25CD5DC278455D300A78B5E /* Views */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		8884CDA427C9CF5A009962DB /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8884CDA627C9D46B009962DB /* AuthRepository.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8884CDA527C9D388009962DB /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				F25CD5E22784574600A78B5E /* SignInView.swift */,
+				F272263D2785593900772135 /* SignInViewModel.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
 		F25CD5A527844D9400A78B5E = {
 			isa = PBXGroup;
 			children = (
@@ -127,12 +154,9 @@
 				F25CD5B127844D9400A78B5E /* EsaNotesApp.swift */,
 				F25CD5E12784561A00A78B5E /* Resources */,
 				F298F859278C104200AD3C48 /* Helpers */,
-				F25CD5E02784560000A78B5E /* Extensions */,
-				F25CD5DF278455F800A78B5E /* Services */,
-				F25CD5DE278455ED00A78B5E /* ViewModels */,
-				F25CD5DD278455DB00A78B5E /* Models */,
-				F25CD5DC278455D300A78B5E /* Views */,
-				F25CD5B727844D9600A78B5E /* Preview Content */,
+				8884CDA427C9CF5A009962DB /* Data */,
+				8884CDA327C9CF3E009962DB /* UI */,
+				F25CD5DD278455DB00A78B5E /* Model */,
 			);
 			path = EsaNotes;
 			sourceTree = "<group>";
@@ -166,7 +190,6 @@
 			isa = PBXGroup;
 			children = (
 				F25CD5B327844D9400A78B5E /* ContentView.swift */,
-				F25CD5E22784574600A78B5E /* SignInView.swift */,
 				F25CD5E42784575F00A78B5E /* ProfileView.swift */,
 				F25CD5E62784577300A78B5E /* FeedView.swift */,
 				F25CD5E82784578000A78B5E /* CalendarView.swift */,
@@ -176,35 +199,13 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		F25CD5DD278455DB00A78B5E /* Models */ = {
+		F25CD5DD278455DB00A78B5E /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				F2B9398E278BD8C800407888 /* APIs */,
 				F261EB092786A40E00B7CCA8 /* User.swift */,
 			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		F25CD5DE278455ED00A78B5E /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				F272263D2785593900772135 /* SignInViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		F25CD5DF278455F800A78B5E /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		F25CD5E02784560000A78B5E /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F25CD5E12784561A00A78B5E /* Resources */ = {
@@ -218,6 +219,7 @@
 		F298F859278C104200AD3C48 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				F25CD5B727844D9600A78B5E /* Preview Content */,
 				F298F85C278C11E100AD3C48 /* SharedData.swift */,
 				F257953A278D0CC6000F49A1 /* Enums&Structs.swift */,
 			);
@@ -394,6 +396,7 @@
 				F25CD5E72784577300A78B5E /* FeedView.swift in Sources */,
 				F25CD5E52784575F00A78B5E /* ProfileView.swift in Sources */,
 				F25CD5ED2784579C00A78B5E /* PostView.swift in Sources */,
+				8884CDA727C9D46B009962DB /* AuthRepository.swift in Sources */,
 				F298F858278BF6FA00AD3C48 /* AuthorizeToken.swift in Sources */,
 				F25CD5E92784578000A78B5E /* CalendarView.swift in Sources */,
 				F238D46C278696EF00B09CFB /* NetworkRequest.swift in Sources */,
@@ -404,7 +407,6 @@
 				F257953B278D0CC6000F49A1 /* Enums&Structs.swift in Sources */,
 				F298F85D278C11E100AD3C48 /* SharedData.swift in Sources */,
 				F25CD5E32784574600A78B5E /* SignInView.swift in Sources */,
-				F2B93990278BD8FE00407888 /* APIClientKey.swift in Sources */,
 				F25CD5B227844D9400A78B5E /* EsaNotesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
