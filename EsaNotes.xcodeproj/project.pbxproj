@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8884CDA727C9D46B009962DB /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884CDA627C9D46B009962DB /* AuthRepository.swift */; };
+		8884CDA927C9D7C3009962DB /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884CDA827C9D7C2009962DB /* AuthService.swift */; };
+		8884CDAC27C9F7AD009962DB /* SwAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8884CDAB27C9F7AD009962DB /* SwAuth */; };
+		8884CDAE27CA5090009962DB /* SigninUiState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884CDAD27CA5090009962DB /* SigninUiState.swift */; };
 		F238D46C278696EF00B09CFB /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F238D46B278696EF00B09CFB /* NetworkRequest.swift */; };
 		F257953B278D0CC6000F49A1 /* Enums&Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F257953A278D0CC6000F49A1 /* Enums&Structs.swift */; };
 		F25CD5B227844D9400A78B5E /* EsaNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25CD5B127844D9400A78B5E /* EsaNotesApp.swift */; };
@@ -49,6 +52,8 @@
 
 /* Begin PBXFileReference section */
 		8884CDA627C9D46B009962DB /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
+		8884CDA827C9D7C2009962DB /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		8884CDAD27CA5090009962DB /* SigninUiState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninUiState.swift; sourceTree = "<group>"; };
 		F238D46B278696EF00B09CFB /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		F257953A278D0CC6000F49A1 /* Enums&Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Enums&Structs.swift"; sourceTree = "<group>"; };
 		F25CD5AE27844D9400A78B5E /* EsaNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EsaNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8884CDAC27C9F7AD009962DB /* SwAuth in Frameworks */,
 				F2D83F7027854A1300E25B82 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				8884CDA627C9D46B009962DB /* AuthRepository.swift */,
+				8884CDA827C9D7C2009962DB /* AuthService.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -123,6 +130,7 @@
 			children = (
 				F25CD5E22784574600A78B5E /* SignInView.swift */,
 				F272263D2785593900772135 /* SignInViewModel.swift */,
+				8884CDAD27CA5090009962DB /* SigninUiState.swift */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -255,6 +263,7 @@
 			name = EsaNotes;
 			packageProductDependencies = (
 				F2D83F6F27854A1300E25B82 /* FirebaseAuth */,
+				8884CDAB27C9F7AD009962DB /* SwAuth */,
 			);
 			productName = EsaNotes;
 			productReference = F25CD5AE27844D9400A78B5E /* EsaNotes.app */;
@@ -330,6 +339,7 @@
 			mainGroup = F25CD5A527844D9400A78B5E;
 			packageReferences = (
 				F2D83F6E27854A1300E25B82 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				8884CDAA27C9F7AD009962DB /* XCRemoteSwiftPackageReference "SwAuth" */,
 			);
 			productRefGroup = F25CD5AF27844D9400A78B5E /* Products */;
 			projectDirPath = "";
@@ -401,6 +411,7 @@
 				F25CD5E92784578000A78B5E /* CalendarView.swift in Sources */,
 				F238D46C278696EF00B09CFB /* NetworkRequest.swift in Sources */,
 				F25CD5EB2784578C00A78B5E /* SearchView.swift in Sources */,
+				8884CDAE27CA5090009962DB /* SigninUiState.swift in Sources */,
 				F272263E2785593900772135 /* SignInViewModel.swift in Sources */,
 				F261EB0A2786A40E00B7CCA8 /* User.swift in Sources */,
 				F25CD5B427844D9400A78B5E /* ContentView.swift in Sources */,
@@ -408,6 +419,7 @@
 				F298F85D278C11E100AD3C48 /* SharedData.swift in Sources */,
 				F25CD5E32784574600A78B5E /* SignInView.swift in Sources */,
 				F25CD5B227844D9400A78B5E /* EsaNotesApp.swift in Sources */,
+				8884CDA927C9D7C3009962DB /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,7 +579,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"EsaNotes/Preview Content\"";
 				DEVELOPMENT_TEAM = 69MAR4S32D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -598,7 +609,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"EsaNotes/Preview Content\"";
 				DEVELOPMENT_TEAM = 69MAR4S32D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -740,6 +750,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8884CDAA27C9F7AD009962DB /* XCRemoteSwiftPackageReference "SwAuth" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Colaski/SwAuth.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		F2D83F6E27854A1300E25B82 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
@@ -751,6 +769,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8884CDAB27C9F7AD009962DB /* SwAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8884CDAA27C9F7AD009962DB /* XCRemoteSwiftPackageReference "SwAuth" */;
+			productName = SwAuth;
+		};
 		F2D83F6F27854A1300E25B82 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F2D83F6E27854A1300E25B82 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

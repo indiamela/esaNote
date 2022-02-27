@@ -7,17 +7,21 @@
 
 import SwiftUI
 
+@MainActor
 struct SignInView: View {
     @Environment(\.dismiss) var dismiss
-    @StateObject var viewModel = SignInViewModel()
+    @StateObject private var viewModel = SignInViewModel()
     var body: some View {
+        let state = viewModel.state
         VStack{
             Image("esaNote")
                 .resizable()
                 .scaledToFit()
                 .frame(width: 300)
             Button(action: {
-                viewModel.signIn()
+                Task {
+                    await viewModel.onSignInButtonDidTap()
+                }
             }, label: {
                 HStack{
                     MyImage.toriGray
@@ -34,7 +38,7 @@ struct SignInView: View {
             })
                 .accentColor(Color.black)
         }
-        .onChange(of: viewModel.isSuccess) { success in
+        .onChange(of: state.showHomeView) { success in
             if success {
                 dismiss()
             }
