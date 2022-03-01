@@ -5,19 +5,24 @@
 //
 
 import Foundation
+import KeychainAccess
 
 final class SharedData {
     static let shared = SharedData()
 
     private let defaults: UserDefaults
+    private let keychain: Keychain
 
     private init() {
         #if DEBUG
         self.defaults = UserDefaults(suiteName: "com.esanote.Debug")!
+        self.keychain = Keychain(service: "com.esanote.Debug")
         #elseif TEST
         self.defaults = UserDefaults(suiteName: "com.esanote.Tests")!
+        self.keychain = Keychain(service: "com.esanote.Tests")
         #else
         self.defaults = .standard
+        self.keychain = Keychain()
         #endif
     }
 
@@ -31,11 +36,6 @@ extension DataStore {
     var isLoggedIn: Bool {
         get { bool("login") }
         set { set(newValue, forKey: "login") }
-    }
-
-    var accessToken: String? {
-        get { string("access_token") }
-        set { set(newValue, forKey: "access_token") }
     }
 
     var userName: String? {
@@ -56,6 +56,11 @@ extension DataStore {
     var email: String? {
         get { string("email") }
         set { set(newValue, forKey: "email") }
+    }
+
+    var accessToken: String? {
+        get { getKeychain("access_token") }
+        set { setKeychain(newValue, forKey: "access_token") }
     }
 
     func clearAccountInfo() {
@@ -87,6 +92,8 @@ protocol DataStore: AnyObject {
     func set(_ newValue: Any?, forKey: String)
     func removeObject(for key: String)
     func removeAllObjects()
+    func getKeychain(_ key: String) -> String?
+    func setKeychain(_ newValue: String?, forKey: String)
 }
 
 extension SharedData: DataStore {
@@ -130,4 +137,15 @@ extension SharedData: DataStore {
         defaults.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
         defaults.synchronize()
     }
+
+    func getKeychain(_ key: String) -> String? {
+        try! keychain.getString(key)
+    }
+
+    func setKeychain(_ newValue: String?, forKey: String) {
+        if let newValue = newValue {
+            try! keychain.set(newValue, key: forKey)
+        }
+    }
+
 }
