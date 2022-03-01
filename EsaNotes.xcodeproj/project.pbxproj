@@ -10,6 +10,8 @@
 		8884CDA727C9D46B009962DB /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884CDA627C9D46B009962DB /* AuthRepository.swift */; };
 		8884CDA927C9D7C3009962DB /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884CDA827C9D7C2009962DB /* AuthService.swift */; };
 		8884CDAE27CA5090009962DB /* SigninUiState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884CDAD27CA5090009962DB /* SigninUiState.swift */; };
+		8884CDB127CBA640009962DB /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 8884CDB027CBA640009962DB /* KeychainAccess */; };
+		8884CDB527CE43C3009962DB /* APIClientKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884CDB427CE43C3009962DB /* APIClientKey.swift */; };
 		F238D46C278696EF00B09CFB /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F238D46B278696EF00B09CFB /* NetworkRequest.swift */; };
 		F257953B278D0CC6000F49A1 /* Enums&Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F257953A278D0CC6000F49A1 /* Enums&Structs.swift */; };
 		F25CD5B227844D9400A78B5E /* EsaNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25CD5B127844D9400A78B5E /* EsaNotesApp.swift */; };
@@ -53,6 +55,7 @@
 		8884CDA627C9D46B009962DB /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
 		8884CDA827C9D7C2009962DB /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		8884CDAD27CA5090009962DB /* SigninUiState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninUiState.swift; sourceTree = "<group>"; };
+		8884CDB427CE43C3009962DB /* APIClientKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientKey.swift; sourceTree = "<group>"; };
 		F238D46B278696EF00B09CFB /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		F257953A278D0CC6000F49A1 /* Enums&Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Enums&Structs.swift"; sourceTree = "<group>"; };
 		F25CD5AE27844D9400A78B5E /* EsaNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EsaNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,7 +79,6 @@
 		F272263F2785598600772135 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F298F857278BF6FA00AD3C48 /* AuthorizeToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeToken.swift; sourceTree = "<group>"; };
 		F298F85C278C11E100AD3C48 /* SharedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
-		F2B9398F278BD8FE00407888 /* APIClientKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8884CDB127CBA640009962DB /* KeychainAccess in Frameworks */,
 				F2D83F7027854A1300E25B82 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,8 +238,8 @@
 		F2B9398E278BD8C800407888 /* APIs */ = {
 			isa = PBXGroup;
 			children = (
+				8884CDB427CE43C3009962DB /* APIClientKey.swift */,
 				F238D46B278696EF00B09CFB /* NetworkRequest.swift */,
-				F2B9398F278BD8FE00407888 /* APIClientKey.swift */,
 				F298F857278BF6FA00AD3C48 /* AuthorizeToken.swift */,
 			);
 			path = APIs;
@@ -261,6 +264,7 @@
 			name = EsaNotes;
 			packageProductDependencies = (
 				F2D83F6F27854A1300E25B82 /* FirebaseAuth */,
+				8884CDB027CBA640009962DB /* KeychainAccess */,
 			);
 			productName = EsaNotes;
 			productReference = F25CD5AE27844D9400A78B5E /* EsaNotes.app */;
@@ -337,6 +341,7 @@
 			packageReferences = (
 				F2D83F6E27854A1300E25B82 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				8884CDAA27C9F7AD009962DB /* XCRemoteSwiftPackageReference "SwAuth" */,
+				8884CDAF27CBA640009962DB /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 			);
 			productRefGroup = F25CD5AF27844D9400A78B5E /* Products */;
 			projectDirPath = "";
@@ -405,6 +410,7 @@
 				F25CD5ED2784579C00A78B5E /* PostView.swift in Sources */,
 				8884CDA727C9D46B009962DB /* AuthRepository.swift in Sources */,
 				F298F858278BF6FA00AD3C48 /* AuthorizeToken.swift in Sources */,
+				8884CDB527CE43C3009962DB /* APIClientKey.swift in Sources */,
 				F25CD5E92784578000A78B5E /* CalendarView.swift in Sources */,
 				F238D46C278696EF00B09CFB /* NetworkRequest.swift in Sources */,
 				F25CD5EB2784578C00A78B5E /* SearchView.swift in Sources */,
@@ -755,6 +761,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		8884CDAF27CBA640009962DB /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		F2D83F6E27854A1300E25B82 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
@@ -766,6 +780,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8884CDB027CBA640009962DB /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8884CDAF27CBA640009962DB /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
 		F2D83F6F27854A1300E25B82 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F2D83F6E27854A1300E25B82 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

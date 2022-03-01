@@ -8,6 +8,7 @@ import Foundation
 import Combine
 import AuthenticationServices
 
+@MainActor
 final class SignInViewModel: ObservableObject {
     @Published private(set) var state: SigninUiState
 

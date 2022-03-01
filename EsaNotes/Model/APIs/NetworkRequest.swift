@@ -88,8 +88,8 @@ struct NetworkRequest {
 
     // MARK: Private Constants
     static let callbackURLScheme = "esanote"
-    static let clientID = "nNXi0McgqZMMvHLM07g1OV7B_tf2ocurR2uMuQarbZ4"
-    static let clientSecret = "2BXSRlfY9UpJMYrWLkwJosCwAIWAV7E0pxyd9bfoRpk"
+    static let clientID = APIClientKey.clientID
+    static let clientSecret = APIClientKey.clientSecret
 
     // MARK: Properties
     var method: HTTPMethod
