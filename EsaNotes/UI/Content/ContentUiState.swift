@@ -6,7 +6,12 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct ContentUiState: Equatable {
     var isLoggedIn: Bool = false
+    var userName: String = ""
+    var screenName: String = ""
+    var iconURL: URL? = nil
+    var email: String? = nil
 }

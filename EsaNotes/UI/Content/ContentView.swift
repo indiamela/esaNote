@@ -7,6 +7,7 @@
 import SwiftUI
 import Combine
 
+@MainActor
 struct ContentView: View {
     @StateObject private var viewModel = ContentViewModel()
     var body: some View {
@@ -14,15 +15,44 @@ struct ContentView: View {
         TabView {
             NavigationView {
                 FeedView()
+                    .navigationBarTitle(Text("Feed"), displayMode: .inline)
+                    .navigationBarItems(
+                        leading:
+                            AsyncImage(url: state.iconURL) { phase in
+                                switch phase {
+                                case .success(let image):
+                                    image
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                case .empty:
+                                    ProgressView()
+                                default:
+                                    EmptyView()
+                                }
+                            },
+                        trailing:
+                            Button {
+                                Task {
+                                    viewModel.logOut()
+                                }
+                            } label: {
+                                Image(systemName: "person.fill")
+                            }
+                    )
+                    .tabItem {
+                        Image(systemName: "list.dash.header.rectangle")
+                    }
             }
-            .tabItem {
-                Image(systemName: "list.dash.header.rectangle")
-            }
+
             CalendarView()
                 .tabItem {
                     Image(systemName: "calendar")
                 }
-            ProfileView()
+            ProfileView(
+                userName: state.userName,
+                screenName: state.screenName,
+                email: state.email
+            )
                 .tabItem {
                     Image(systemName: "person.fill")
                 }
@@ -36,14 +66,13 @@ struct ContentView: View {
                 }
         }
         .font(.headline)
-        .task {
-            if state.isLoggedIn {
-
+        .fullScreenCover(isPresented: viewModel.shouldLogIn, onDismiss: {
+            Task {
+                await viewModel.fetchUserProfile()
             }
-        }
-        .fullScreenCover(isPresented: viewModel.shouldLogIn) {
+        }, content: {
             LogInView()
-        }
+        })
     }
 }
 

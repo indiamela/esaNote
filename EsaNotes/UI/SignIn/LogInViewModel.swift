@@ -21,7 +21,6 @@ final class LogInViewModel: ObservableObject {
     }
 
     func onLogInButtonDidTap() async {
-        guard SharedData.shared.isLoggedIn else { return }
         do {
             state.isLoading = true
             try await authRepository.logIn()

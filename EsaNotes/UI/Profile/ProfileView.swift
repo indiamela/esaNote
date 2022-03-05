@@ -8,13 +8,21 @@
 import SwiftUI
 
 struct ProfileView: View {
+    let userName: String
+    let screenName: String
+    let email: String?
+
     var body: some View {
-        Text("ProfileView")
+        VStack {
+            Text(userName)
+            Text(email ?? "")
+            Text(screenName)
+        }
     }
 }
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        ProfileView(userName: "", screenName: "", email: "")
     }
 }

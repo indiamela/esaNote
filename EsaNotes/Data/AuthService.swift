@@ -10,26 +10,49 @@ import AuthenticationServices
 
 final class AuthService: NSObject {
     var authenticationSession: ASWebAuthenticationSession!
-    func lognIn() async throws {
-        guard let logInURL =
-                NetworkRequest.RequestType.logIn.networkRequest()?.url
-        else {
-            print("Could not create the sign in URL .")
-            return
-        }
+    let callbackURLScheme = "esanote"
+    let clientID = APIClientKey.clientID
+    let clientSecret = APIClientKey.clientSecret
+    let networkRequest = NetworkRequest()
 
-        let callbackURLScheme = NetworkRequest.callbackURLScheme
+    func lognIn() async throws {
+        let path = "/oauth/authorize"
+        let queryItems =
+        [
+            "client_id": clientID,
+            "redirect_uri": "esanote://oauth-callback",
+            "scope": "read+write",
+            "response_type": "code",
+            "state": "a7e567e2fb858f0e12838798016ee9cf8ccc778"
+        ].map { URLQueryItem(name: $0, value: $1) }
+
+        guard let logInURL = networkRequest.urlComponents(path: path, queryItems: queryItems).url
+        else {
+            throw NetworkRequest.RequestError.networkCreationError
+        }
+        let callbackURLScheme = callbackURLScheme
 
         do {
             let callbackURL = try await authenticate(logInURL: logInURL, callbackURLScheme: callbackURLScheme)
             let queryItems = URLComponents(string: callbackURL.absoluteString)?.queryItems
             let code = queryItems?.first(where: { $0.name == "code" })?.value ?? ""
-            let networkRequest = NetworkRequest.RequestType.codeExchange(code: code).networkRequest()
-            let authorization = try await getAccessToken(request: networkRequest)
-            SharedData.shared.accessToken = authorization.accessToken
+            SharedData.shared.accessToken = try await getAuthorizeToken(code: code).accessToken
         } catch {
             print(error)
         }
+    }
+
+    private func getAuthorizeToken(code: String) async throws -> AuthorizeToken{
+        let path = "/oauth/token"
+        let queryItems =
+        [
+            "client_id": clientID,
+            "client_secret": clientSecret,
+            "code": code,
+            "grant_type": "authorization_code",
+            "redirect_uri": "esanote://oauth-callback"
+        ].map { URLQueryItem(name: $0, value: $1) }
+        return try await networkRequest.start(path: path, queryItems: queryItems, method: .post)
     }
 
     private func authenticate(logInURL: URL, callbackURLScheme: String?) async throws -> URL {
@@ -49,52 +72,9 @@ final class AuthService: NSObject {
             authenticationSession.prefersEphemeralWebBrowserSession = true
 
             if !authenticationSession.start() {
-                print("Failed to start ASWebAuthenticationSession")
+                continuation.resume(with: .failure(NetworkRequest.RequestError.otherError))
             }
         }
-    }
-
-    private func getAccessToken(request: NetworkRequest?) async throws -> AuthorizeToken {
-        try await withCheckedThrowingContinuation { continuation in
-            guard let request = request else {
-                print("No NetworkRequest")
-                fatalError()
-            }
-            request.start(responseType: AuthorizeToken.self) { result in
-                switch result {
-                case .success(let (_ , object)):
-                    continuation.resume(with: .success(object))
-                case .failure(let error):
-                    print("Failed to exchange access code for tokens: \(error)")
-                    continuation.resume(with: .failure(error))
-                }
-            }
-        }
-    }
-
-    func setUserData(user: User) {
-        SharedData.shared.isLoggedIn = true
-        SharedData.shared.userName = user.name
-        SharedData.shared.screenName = user.screenName
-        SharedData.shared.icon = user.icon
-        SharedData.shared.email = user.email
-    }
-
-    private func getUser() {
-        SharedData.shared.isLoading = true
-        NetworkRequest
-            .RequestType
-            .getUser
-            .networkRequest()?
-            .start(responseType: User.self) { [weak self] result in
-                switch result {
-                case .success(let (_, object)):
-                    self?.setUserData(user: object)
-                case .failure(let error):
-                    print("Failed to get user, or there is no valid/active session: \(error.localizedDescription)")
-                }
-                SharedData.shared.isLoading = false
-            }
     }
 }
 
