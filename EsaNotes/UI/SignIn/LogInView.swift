@@ -8,9 +8,9 @@
 import SwiftUI
 
 @MainActor
-struct SignInView: View {
+struct LogInView: View {
     @Environment(\.dismiss) var dismiss
-    @StateObject private var viewModel = SignInViewModel()
+    @StateObject private var viewModel = LogInViewModel()
     var body: some View {
         let state = viewModel.state
         VStack{
@@ -20,7 +20,7 @@ struct SignInView: View {
                 .frame(width: 300)
             Button(action: {
                 Task {
-                    await viewModel.onSignInButtonDidTap()
+                    await viewModel.onLogInButtonDidTap()
                 }
             }, label: {
                 HStack{
@@ -48,6 +48,6 @@ struct SignInView: View {
 
 struct OathView_Previews: PreviewProvider {
     static var previews: some View {
-        SignInView()
+        LogInView()
     }
 }

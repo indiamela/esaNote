@@ -10,9 +10,9 @@ import AuthenticationServices
 
 final class AuthService: NSObject {
     var authenticationSession: ASWebAuthenticationSession!
-    func signIn() async throws {
-        guard let signInURL =
-                NetworkRequest.RequestType.signIn.networkRequest()?.url
+    func lognIn() async throws {
+        guard let logInURL =
+                NetworkRequest.RequestType.logIn.networkRequest()?.url
         else {
             print("Could not create the sign in URL .")
             return
@@ -21,7 +21,7 @@ final class AuthService: NSObject {
         let callbackURLScheme = NetworkRequest.callbackURLScheme
 
         do {
-            let callbackURL = try await authenticate(signInURL: signInURL, callbackURLScheme: callbackURLScheme)
+            let callbackURL = try await authenticate(logInURL: logInURL, callbackURLScheme: callbackURLScheme)
             let queryItems = URLComponents(string: callbackURL.absoluteString)?.queryItems
             let code = queryItems?.first(where: { $0.name == "code" })?.value ?? ""
             let networkRequest = NetworkRequest.RequestType.codeExchange(code: code).networkRequest()
@@ -32,10 +32,10 @@ final class AuthService: NSObject {
         }
     }
 
-    private func authenticate(signInURL: URL, callbackURLScheme: String?) async throws -> URL {
+    private func authenticate(logInURL: URL, callbackURLScheme: String?) async throws -> URL {
         try await withCheckedThrowingContinuation { continuation in
             authenticationSession = ASWebAuthenticationSession(
-                url: signInURL,
+                url: logInURL,
                 callbackURLScheme: callbackURLScheme) { callbackURL, error in
                     if let callbackURL = callbackURL {
                         continuation.resume(with: .success(callbackURL))

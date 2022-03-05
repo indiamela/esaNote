@@ -9,9 +9,9 @@ import SwiftUI
 
 final class ContentViewModel: ObservableObject {
     @Published private(set) var state: ContentUiState
-    var showSigninView: Binding<Bool> {
-        Binding(get: { self.state.shouldLogin },
-                set: { self.state.shouldLogin = $0})
+    var shouldLogIn: Binding<Bool> {
+        Binding(get: { !self.state.isLoggedIn },
+                set: { self.state.isLoggedIn = !$0})
     }
 
     init(

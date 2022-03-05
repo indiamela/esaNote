@@ -8,5 +8,5 @@
 import Foundation
 
 struct ContentUiState: Equatable {
-    var shouldLogin: Bool = false
+    var isLoggedIn: Bool = false
 }

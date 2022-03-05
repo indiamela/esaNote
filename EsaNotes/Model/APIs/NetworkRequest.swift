@@ -23,7 +23,7 @@ struct NetworkRequest {
     enum RequestType: Equatable {
         case codeExchange(code: String)
         case getUser
-        case signIn
+        case logIn
 
         func networkRequest() -> NetworkRequest? {
             guard let url = url() else {
@@ -38,7 +38,7 @@ struct NetworkRequest {
                 return .post
             case .getUser:
                 return .get
-            case .signIn:
+            case .logIn:
                 return .get
             }
         }
@@ -57,7 +57,7 @@ struct NetworkRequest {
                 return urlComponents(path: "/oauth/token", queryItems: queryItems).url
             case .getUser:
                 return urlComponents(path: "/v1/user", queryItems: nil).url
-            case .signIn:
+            case .logIn:
                 let queryItems =
                 [
                     "client_id": NetworkRequest.clientID,

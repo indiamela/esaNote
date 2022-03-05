@@ -10,6 +10,7 @@ import Combine
 struct ContentView: View {
     @StateObject private var viewModel = ContentViewModel()
     var body: some View {
+        let state = viewModel.state
         TabView {
             NavigationView {
                 FeedView()
@@ -35,8 +36,13 @@ struct ContentView: View {
                 }
         }
         .font(.headline)
-        .fullScreenCover(isPresented: viewModel.showSigninView) {
-            SignInView()
+        .task {
+            if state.isLoggedIn {
+
+            }
+        }
+        .fullScreenCover(isPresented: viewModel.shouldLogIn) {
+            LogInView()
         }
     }
 }
