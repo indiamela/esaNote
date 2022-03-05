@@ -5,8 +5,6 @@
 //
 
 import Foundation
-import Combine
-import AuthenticationServices
 
 @MainActor
 final class SignInViewModel: ObservableObject {
@@ -23,9 +21,11 @@ final class SignInViewModel: ObservableObject {
     }
 
     func onSignInButtonDidTap() async {
+        guard SharedData.shared.isLoggedIn else { return }
         do {
             state.isLoading = true
             try await authRepository.signIn()
+            SharedData.shared.isLoggedIn = true
             state.isLoading = false
             state.showHomeView = true
         } catch {

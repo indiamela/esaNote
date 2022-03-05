@@ -5,9 +5,10 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ContentView: View {
-    @State var shouldLogIn = !SharedData.shared.isLoggedIn
+    @StateObject private var viewModel = ContentViewModel()
     var body: some View {
         TabView {
             NavigationView {
@@ -34,7 +35,7 @@ struct ContentView: View {
                 }
         }
         .font(.headline)
-        .fullScreenCover(isPresented: $shouldLogIn) {
+        .fullScreenCover(isPresented: viewModel.showSigninView) {
             SignInView()
         }
     }
