@@ -15,4 +15,12 @@ struct ContentUiState: Equatable {
     var screenName: String = ""
     var iconURL: URL? = nil
     var email: String? = nil
+
+    mutating func clearAcount() {
+        self.userName = ""
+        self.screenName = ""
+        self.email = nil
+        self.iconURL = nil
+        SharedData.shared.accessToken = nil
+    }
 }

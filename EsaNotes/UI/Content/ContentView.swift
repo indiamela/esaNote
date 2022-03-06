@@ -16,20 +16,8 @@ struct ContentView: View {
             TabView {
                 FeedView()
                     .tabItem {
-                        Image(systemName: "home.fill")
+                        Image(systemName: "house.fill")
                     }
-                    .navigationBarTitle(Text("Feed"), displayMode: .inline)
-                    .toolbar{
-                        ToolbarItem(placement: .navigationBarLeading) {
-                            MyImage.asyncImage(url: state.iconURL)
-                                .frame(width: 25, height: 25)
-                                .clipShape(Circle())
-                        }
-                    }
-//                CalendarView()
-//                    .tabItem {
-//                        Image(systemName: "calendar")
-//                    }
                 ProfileView(
                     userName: state.userName,
                     screenName: state.screenName,
@@ -47,14 +35,34 @@ struct ContentView: View {
                         Image(systemName: "square.and.pencil")
                     }
             }
+            .navigationBarTitle(Text("Feed"), displayMode: .inline)
+            .navigationBarItems(leading:leadingTabbarItem, trailing: trailingTabbarItem)
         }
         .font(.headline)
-        .fullScreenCover(isPresented: viewModel.shouldLogIn, onDismiss: {
+        .fullScreenCover(isPresented: viewModel.shouldLogIn){
+            LogInView()
+        }
+        .onChange(of: state.isLoggedIn) { isLoggedIn in
             Task {
                 await viewModel.fetchUserProfile()
             }
-        }){
-            LogInView()
+        }
+    }
+}
+
+extension ContentView {
+    var leadingTabbarItem: some View {
+        let state = viewModel.state
+        return MyImage.asyncImage(url: state.iconURL)
+            .frame(width: 25, height: 25)
+            .clipShape(Circle())
+    }
+
+    var trailingTabbarItem: some View {
+        Menu {
+            Button("LogOut", action: {viewModel.logOut()})
+        } label: {
+            Image(systemName: "ellipsis.circle")
         }
     }
 }

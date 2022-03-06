@@ -25,6 +25,7 @@ final class ContentViewModel: ObservableObject {
     }
 
     func fetchUserProfile() async {
+        guard state.isLoggedIn else { return }
         state.isLoading = true
         await getUser()
         state.isLoading = false
@@ -32,7 +33,7 @@ final class ContentViewModel: ObservableObject {
     }
 
     func logOut() {
-        clearUser()
+        state.clearAcount()
         state.isLoggedIn = false
     }
 
@@ -46,13 +47,5 @@ final class ContentViewModel: ObservableObject {
         } catch {
             print(error)
         }
-    }
-
-    private func clearUser() {
-        state.userName = ""
-        state.screenName = ""
-        state.email = nil
-        state.iconURL = nil
-        SharedData.shared.accessToken = nil
     }
 }

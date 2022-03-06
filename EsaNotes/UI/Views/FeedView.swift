@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct FeedView: View {
-    let title = "Feed"
     var body: some View {
         Text("FeedView")
     }
