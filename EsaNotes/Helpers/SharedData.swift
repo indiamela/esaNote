@@ -33,43 +33,9 @@ final class SharedData {
 
 // MARK: Account Info
 extension DataStore {
-    var isLoggedIn: Bool {
-        get { bool("login") }
-        set { set(newValue, forKey: "login") }
-    }
-
-    var userName: String? {
-        get { string("user_name") }
-        set { set(newValue, forKey: "user_name") }
-    }
-
-    var screenName: String? {
-        get { string("screen_name") }
-        set { set(newValue, forKey: "screen_name") }
-    }
-
-    var icon: String? {
-        get { string("icon") }
-        set { set(newValue, forKey: "icon") }
-    }
-
-    var email: String? {
-        get { string("email") }
-        set { set(newValue, forKey: "email") }
-    }
-
     var accessToken: String? {
         get { getKeychain("access_token") }
         set { setKeychain(newValue, forKey: "access_token") }
-    }
-
-    func clearAccountInfo() {
-        isLoggedIn = false
-        accessToken = ""
-        userName = ""
-        screenName = ""
-        icon = ""
-        email = ""
     }
 }
 

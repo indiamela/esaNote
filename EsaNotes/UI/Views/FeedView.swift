@@ -8,22 +8,9 @@
 import SwiftUI
 
 struct FeedView: View {
+    let title = "Feed"
     var body: some View {
-        VStack {
-
-        }
-        .navigationBarTitle(Text("Feed"), displayMode: .inline)
-//        .navigationBarItems(
-//            leading:
-//                AsyncImage(url: URL(string: SharedData.shared.icon ?? "")) { phase in
-//                    if let image = phase.image {
-//                        image
-//                            .resizable()
-//                    } else {
-//                        Image(systemName: "person.fill")
-//                    }
-//                }
-//        )
+        Text("FeedView")
     }
 }
 

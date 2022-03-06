@@ -10,19 +10,39 @@ import SwiftUI
 struct ProfileView: View {
     let userName: String
     let screenName: String
-    let email: String?
+    let iconURL: URL?
 
     var body: some View {
-        VStack {
-            Text(userName)
-            Text(email ?? "")
-            Text(screenName)
+        VStack{
+            HStack {
+                MyImage.asyncImage(url: iconURL)
+                    .frame(width: 34, height: 34)
+                    .clipShape(Circle())
+                VStack(alignment: .leading) {
+                    Text(userName)
+                    Text(screenName)
+                }
+            }
+            
         }
     }
 }
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView(userName: "", screenName: "", email: "")
+        NavigationView {
+            ProfileView(userName: "Taishi Kuausnose",
+                        screenName: "taishi_kusunose",
+                        iconURL: URL(string: "https://img.esa.io/uploads/production/members/116423/icon/thumb_l_4289f52880cd9110af0f51948764e9e4.JPG")
+            )
+                .navigationBarTitle(Text("Feed"), displayMode: .inline)
+                .toolbar{
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        MyImage.asyncImage(url: URL(string: ""))
+                            .frame(width: 25, height: 25)
+                            .clipShape(Circle())
+                    }
+                }
+        }
     }
 }

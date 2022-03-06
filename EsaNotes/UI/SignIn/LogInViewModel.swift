@@ -24,7 +24,6 @@ final class LogInViewModel: ObservableObject {
         do {
             state.isLoading = true
             try await authRepository.logIn()
-            SharedData.shared.isLoggedIn = true
             state.isLoading = false
             state.showHomeView = true
         } catch {

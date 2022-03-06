@@ -13,6 +13,20 @@ struct MyImage {
     static let logoGray = Image("esa-logo_whitebg")
     static let toriWhite = Image("esa-tori_coloredbg")
     static let toriGray = Image("esa-tori_whitebg")
+    static func asyncImage(url: URL?) -> some View{
+        return AsyncImage(url: url) { phase in
+             switch phase {
+             case .success(let image):
+                 image
+                     .resizable()
+                     .aspectRatio(contentMode: .fit)
+             case .empty:
+                 ProgressView()
+             default:
+                 EmptyView()
+             }
+         }
+     }
 }
 
 struct MyColor {

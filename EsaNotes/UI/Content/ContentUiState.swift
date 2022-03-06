@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 struct ContentUiState: Equatable {
+    var isLoading: Bool = true
     var isLoggedIn: Bool = false
     var userName: String = ""
     var screenName: String = ""
