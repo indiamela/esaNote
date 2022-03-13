@@ -19,9 +19,9 @@ struct ContentView: View {
                         Image(systemName: "house.fill")
                     }
                 ProfileView(
-                    userName: state.userName
-//                    screenName: state.screenName,
-//                    iconURL: state.iconURL
+                    userName: state.userName,
+                    screenName: state.screenName,
+                    iconURL: state.iconURL
                 )
                     .tabItem {
                         Image(systemName: "person.fill")
