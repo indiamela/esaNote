@@ -15,7 +15,7 @@ final class AuthService: NSObject {
     let clientSecret = APIClientKey.clientSecret
     let networkRequest = NetworkRequest()
 
-    func lognIn() async throws {
+    func lognIn() async throws -> AuthorizeToken {
         let path = "/oauth/authorize"
         let queryItems =
         [
@@ -36,9 +36,9 @@ final class AuthService: NSObject {
             let callbackURL = try await authenticate(logInURL: logInURL, callbackURLScheme: callbackURLScheme)
             let queryItems = URLComponents(string: callbackURL.absoluteString)?.queryItems
             let code = queryItems?.first(where: { $0.name == "code" })?.value ?? ""
-            SharedData.shared.accessToken = try await getAuthorizeToken(code: code).accessToken
-        } catch {
-            print(error)
+            return try await getAuthorizeToken(code: code)
+        } catch(let error) {
+            throw NetworkRequest.RequestError.otherError(error: error)
         }
     }
 
@@ -72,7 +72,7 @@ final class AuthService: NSObject {
             authenticationSession.prefersEphemeralWebBrowserSession = true
 
             if !authenticationSession.start() {
-                continuation.resume(with: .failure(NetworkRequest.RequestError.otherError))
+                continuation.resume(with: .failure(NetworkRequest.RequestError.otherError(error: nil)))
             }
         }
     }

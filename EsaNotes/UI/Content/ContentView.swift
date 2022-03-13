@@ -19,9 +19,9 @@ struct ContentView: View {
                         Image(systemName: "house.fill")
                     }
                 ProfileView(
-                    userName: state.userName,
-                    screenName: state.screenName,
-                    iconURL: state.iconURL
+                    userName: state.userName
+//                    screenName: state.screenName,
+//                    iconURL: state.iconURL
                 )
                     .tabItem {
                         Image(systemName: "person.fill")
@@ -43,6 +43,7 @@ struct ContentView: View {
             LogInView()
         }
         .onChange(of: state.isLoggedIn) { isLoggedIn in
+            guard isLoggedIn else { return }
             Task {
                 await viewModel.fetchUserProfile()
             }

@@ -14,6 +14,11 @@ protocol AuthRepository: AnyObject {
 final class AuthRepositoryImpl: AuthRepository {
     private let authService: AuthService = .init()
     func logIn() async throws {
-        try await authService.lognIn()
+        do {
+            let authorizeToken = try await authService.lognIn()
+            SharedData.shared.accessToken = authorizeToken.accessToken
+        } catch {
+            throw error
+        }
     }
 }

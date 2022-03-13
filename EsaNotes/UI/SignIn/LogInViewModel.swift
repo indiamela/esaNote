@@ -29,6 +29,7 @@ final class LogInViewModel: ObservableObject {
         } catch {
             print(error)
             state.isLoading = false
+            state.showHomeView = false
         }
     }
 }

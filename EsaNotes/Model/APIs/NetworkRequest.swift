@@ -15,8 +15,8 @@ struct NetworkRequest {
     enum RequestError: Error {
         case invalidResponse
         case networkCreationError
-        case otherError
         case sessionExpired
+        case otherError(error: Error?)
         case decodeError(json: String)
     }
 
@@ -59,7 +59,7 @@ struct NetworkRequest {
         } catch let jsonError as NSError {
             throw NetworkRequest.RequestError.decodeError(json: jsonError.localizedDescription)
         } catch {
-            throw NetworkRequest.RequestError.otherError
+            throw NetworkRequest.RequestError.otherError(error: nil)
         }
     }
 }

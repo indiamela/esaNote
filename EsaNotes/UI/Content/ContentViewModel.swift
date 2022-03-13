@@ -14,6 +14,7 @@ final class ContentViewModel: ObservableObject {
         Binding(get: { !self.state.isLoggedIn },
                 set: { self.state.isLoggedIn = !$0})
     }
+
     private let userRepository: UserRepository
 
     init(
@@ -33,17 +34,19 @@ final class ContentViewModel: ObservableObject {
     }
 
     func logOut() {
-        state.clearAcount()
+        clearAcount()
         state.isLoggedIn = false
+    }
+
+    private func clearAcount() {
+        state.user = nil
+        SharedData.shared.accessToken = nil
     }
 
     private func getUser() async {
         do {
             let user = try await userRepository.getUser()
-            state.userName = user.name
-            state.screenName = user.screenName
-            state.email = user.email
-            state.iconURL = URL(string: user.icon ?? "")
+            state.user = user
         } catch {
             print(error)
         }
