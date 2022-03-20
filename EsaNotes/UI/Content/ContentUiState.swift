@@ -17,7 +17,7 @@ struct ContentUiState: Equatable {
     }
     var screenName: String {
         let name = user?.screenName ?? ""
-        return "@" + screenName
+        return "@" + name
     }
     var iconURL: URL? {
         return URL(string: user?.icon ?? "")
